@@ -1,6 +1,6 @@
 {
   "name": "dissolve",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "description": "Parse and consume binary streams with a neat DSL",
   "main": "index.js",
   "engines": {
