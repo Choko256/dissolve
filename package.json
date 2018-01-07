@@ -14,8 +14,13 @@
     "readable-stream": "^2.0.0"
   },
   "devDependencies": {
+    "babel-eslint": "^8.1.2",
     "chai": "^3.0.0",
-    "mocha": "^2.1.0"
+    "eslint": "^4.15.0",
+    "eslint-plugin-async-await": "^0.0.0",
+    "eslint-plugin-babel": "^4.1.2",
+    "mocha": "^2.1.0",
+    "prettier-eslint": "^8.7.0"
   },
   "repository": {
     "type": "git",
