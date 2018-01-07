@@ -287,7 +287,7 @@ Dissolve.prototype._transform = function _transform(input, encoding, done) {
 
     return done()
 }
-;[['float', 4], ['double', 8]].forEach(function(t) {
+;[(['float', 4], ['double', 8])].forEach(function(t) {
     ['', 'le', 'be'].forEach(function(e) {
         let id = [t[0], e].join('')
         let type = [t[0], e || 'le'].join('')
@@ -304,7 +304,7 @@ Dissolve.prototype._transform = function _transform(input, encoding, done) {
         }
     })
 })
-;[8, 16, 32, 64].forEach(function(b) {
+;[(8, 16, 32, 64)].forEach(function(b) {
     ['', 'u'].forEach(function(s) {
         ['', 'le', 'be'].forEach(function(e) {
             let id = [s, 'int', b, e].join('')
@@ -323,7 +323,7 @@ Dissolve.prototype._transform = function _transform(input, encoding, done) {
         })
     })
 })
-;['tap', 'loop'].forEach(function(e) {
+;[('tap', 'loop', 'interrupt')].forEach(function(e) {
     Dissolve.prototype[e] = function(name, fn) {
         if (typeof name === 'function') {
             fn = name
@@ -348,7 +348,7 @@ Dissolve.prototype._transform = function _transform(input, encoding, done) {
         return this
     }
 })
-;['buffer', 'string'].forEach(function(e) {
+;[('buffer', 'string')].forEach(function(e) {
     Dissolve.prototype[e] = function(name, length) {
         this.jobs.push({
             type : e,
